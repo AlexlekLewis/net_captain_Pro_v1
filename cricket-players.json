@@ -1,0 +1,384 @@
+[
+  {
+    "id": "p1",
+    "name": "Winn",
+    "role": "bat",
+    "xi": "1st XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p2",
+    "name": "Rudd",
+    "role": "bat",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p3",
+    "name": "Roach",
+    "role": "bat_ar_pace",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p4",
+    "name": "Khatra",
+    "role": "bow_ar_pace",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p5",
+    "name": "Spoors",
+    "role": "bat_ar_spin",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p6",
+    "name": "Banthorpe",
+    "role": "bat",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p7",
+    "name": "Z.Elliott",
+    "role": "bat",
+    "xi": "1st XI",
+    "squad": "sq1",
+    "bowlRole": "pace"
+  },
+  {
+    "id": "p8",
+    "name": "Alavi",
+    "role": "bow_ar_spin",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p9",
+    "name": "Kharoud",
+    "role": "bow_ar_pace",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p10",
+    "name": "Taeuber",
+    "role": "bow_ar_pace",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p11",
+    "name": "Bajwa",
+    "role": "spin",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p12",
+    "name": "S.Elliott",
+    "role": "bow_ar_pace",
+    "xi": "1st XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p13",
+    "name": "Bremner",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1",
+    "bowlRole": "pace"
+  },
+  {
+    "id": "p14",
+    "name": "Kellar",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p15",
+    "name": "Sharma",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p16",
+    "name": "Phelan",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p17",
+    "name": "Macciocca",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p18",
+    "name": "Richardson",
+    "role": "bat_ar_spin",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p19",
+    "name": "Bradley",
+    "role": "bat",
+    "xi": "2nd XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p20",
+    "name": "Childs",
+    "role": "bat_ar_pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p21",
+    "name": "Myott",
+    "role": "spin",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p22",
+    "name": "K.Smith",
+    "role": "pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p23",
+    "name": "H.Smith",
+    "role": "pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p24",
+    "name": "Surendran",
+    "role": "pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p25",
+    "name": "Lukies",
+    "role": "bow_ar_spin",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p26",
+    "name": "Robinson",
+    "role": "bow_ar_pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p27",
+    "name": "Parr",
+    "role": "pace",
+    "xi": "2nd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p28",
+    "name": "Rayner",
+    "role": "bat_ar_spin",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p29",
+    "name": "Podesta",
+    "role": "bat_ar_pace",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p30",
+    "name": "Ahmad",
+    "role": "bat_ar_spin",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p31",
+    "name": "De Silva",
+    "role": "bat",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p32",
+    "name": "Heaney",
+    "role": "bat_ar_spin",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p33",
+    "name": "Russell",
+    "role": "bat",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p34",
+    "name": "Donnellan",
+    "role": "bat",
+    "xi": "3rd XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p35",
+    "name": "Forbes",
+    "role": "bow_ar_pace",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p36",
+    "name": "Maaskant",
+    "role": "bow_ar_pace",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p37",
+    "name": "Waghorn",
+    "role": "spin",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p38",
+    "name": "Mitchell",
+    "role": "pace",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p39",
+    "name": "Green",
+    "role": "bat_ar_pace",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p40",
+    "name": "Dossor",
+    "role": "spin",
+    "xi": "3rd XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p41",
+    "name": "Sheers",
+    "role": "bat_ar_pace",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p42",
+    "name": "Kaushik",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p43",
+    "name": "Datta",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p44",
+    "name": "Hales",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p45",
+    "name": "Malangi",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p46",
+    "name": "Sinha",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p47",
+    "name": "Cole",
+    "role": "bow_ar_spin",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p48",
+    "name": "Rees",
+    "role": "bow_ar_spin",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p49",
+    "name": "Hoyne",
+    "role": "bow_ar_pace",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p50",
+    "name": "Blacker",
+    "role": "pace",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p51",
+    "name": "Sheridan",
+    "role": "pace",
+    "xi": "4th XI",
+    "squad": "sq1"
+  },
+  {
+    "id": "p52",
+    "name": "Ahuja",
+    "role": "bat",
+    "xi": "4th XI",
+    "squad": "sq1",
+    "bowlRole": "spin"
+  },
+  {
+    "id": "p53",
+    "name": "Dobson",
+    "role": "bat_ar_spin",
+    "xi": "4th XI",
+    "squad": "sq1"
+  }
+]

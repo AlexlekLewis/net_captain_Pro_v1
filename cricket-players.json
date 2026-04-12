@@ -38,7 +38,7 @@
   {
     "id": "p6",
     "name": "Banthorpe",
-    "role": "bat",
+    "role": "wk",
     "xi": "1st XI",
     "squad": "sq1"
   },
@@ -96,7 +96,7 @@
   {
     "id": "p14",
     "name": "Kellar",
-    "role": "bat",
+    "role": "wk",
     "xi": "2nd XI",
     "squad": "sq1"
   },
@@ -219,7 +219,7 @@
   {
     "id": "p31",
     "name": "De Silva",
-    "role": "bat",
+    "role": "wk",
     "xi": "3rd XI",
     "squad": "sq1"
   },
@@ -240,10 +240,9 @@
   {
     "id": "p34",
     "name": "Donnellan",
-    "role": "bat",
+    "role": "wk",
     "xi": "3rd XI",
-    "squad": "sq1",
-    "bowlRole": "spin"
+    "squad": "sq1"
   },
   {
     "id": "p35",
@@ -319,10 +318,9 @@
   {
     "id": "p45",
     "name": "Malangi",
-    "role": "bat",
+    "role": "wk",
     "xi": "4th XI",
-    "squad": "sq1",
-    "bowlRole": "spin"
+    "squad": "sq1"
   },
   {
     "id": "p46",

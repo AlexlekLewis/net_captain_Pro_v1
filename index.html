@@ -113,23 +113,25 @@ style:{display:"flex",alignItems:"center",gap:6,padding:"6px 10px",borderRadius:
 u.default.createElement("span",{style:{width:8,height:8,borderRadius:"50%",background:bl?"#ddd":c2.border,flexShrink:0}}),
 p2.name," ",u.default.createElement("span",{style:{fontSize:9,color:bl?"#ccc":"#888",marginLeft:"auto"}},cl[p2.role]?.short||p2.role," \u00B7 ",ld*tn,"min",rs2?" \u00B7 ":"",rs2?u.default.createElement("span",{style:{color:"#c62828"}},rs2):null))})}
 else if(cwSw.role==="fielders"){let si=cwSw.slotIdx,sl=cwSlots[si],cands=[];
-let swp=cwSw.player;
+let swp=cwSw.player,swpN=swp.name;
 let swpBatSlot=null;cwSlots.forEach((s2,i2)=>{if(s2.batters.some(b2=>b2.id===swp.id))swpBatSlot=i2});
 let swpBowlSlots=[];cwSlots.forEach((s2,i2)=>{if(s2.bowlers.some(b2=>b2.id===swp.id))swpBowlSlots.push(i2)});
 sl.batters.forEach(p2=>{let warns=[];
-let p2BatSlot=si;
-if(swpBowlSlots.includes(si-1)||swpBowlSlots.includes(si+1))warns.push("Bowls adjacent slot");
-if(sl.wk&&sl.wk.id===swp.id)warns.push("WK keeping this slot");
+if(swpBowlSlots.includes(si-1))warns.push(swpN+" bowls in slot "+si+" (previous)");
+if(swpBowlSlots.includes(si+1))warns.push(swpN+" bowls in slot "+(si+2)+" (next)");
+if(sl.wk&&sl.wk.id===swp.id)warns.push(swpN+" is WK keeping this slot");
 let otherBat=sl.batters.find(b2=>b2.id!==p2.id);
-if(otherBat&&otherBat.role===Wk&&swp.role===Wk)warns.push("Two WKs together");
-if(swpBatSlot!==null)warns.push("Will swap batting slots (slot "+String(si+1)+" ↔ "+String(swpBatSlot+1)+")");
-else warns.push("Takes this batting slot, "+p2.name+" loses theirs");
+if(otherBat&&otherBat.role===Wk&&swp.role===Wk)warns.push(swpN+" + "+otherBat.name+" are both WKs");
+if(swpBatSlot!==null)warns.push(swpN+" takes slot "+(si+1)+" batting, "+p2.name+" moves to slot "+(swpBatSlot+1));
+else warns.push(p2.name+" loses their batting slot");
 cands.push({p:p2,type:"batter",warns:warns})});
 sl.bowlers.forEach(p2=>{let warns=[];
-if(swpBatSlot!==null&&(si===swpBatSlot-1||si===swpBatSlot+1))warns.push("Pad-up conflict with batting slot "+String(swpBatSlot+1));
+if(swpBatSlot!==null&&(si===swpBatSlot-1||si===swpBatSlot+1))warns.push(swpN+" bats slot "+(swpBatSlot+1)+" (pad-up conflict)");
 let curBowlCount=swpBowlSlots.length;
 let maxB=(Bn.includes(swp.role)||swp.bowlRole==="spin")?Math.floor(60/tn):Math.floor(45/tn);
-if(curBowlCount>=maxB)warns.push("At max bowling ("+curBowlCount*tn+"/"+maxB*tn+"min)");
+if(curBowlCount>=maxB)warns.push(swpN+" at max bowling ("+curBowlCount*tn+"/"+maxB*tn+"min)");
+else if(curBowlCount+1>maxB)warns.push(swpN+" would exceed bowling max");
+if(!(le.includes(swp.role)||swp.bowlRole))warns.push(swpN+" is not a bowler");
 cands.push({p:p2,type:"bowler",warns:warns})});
 return cands.map(({p:p2,type:tp,warns:ws})=>{let c2=tp==="batter"?cwPillC(p2,"bat"):cwPillC(p2,"bowl");let hasWarn=ws.length>0;
 return u.default.createElement("button",{key:p2.id,onClick:()=>{let nCw=JSON.parse(JSON.stringify(t.centreWicket));
@@ -144,10 +146,12 @@ nCw.slots.forEach((sl2,si2)=>{let bIds=new Set(sl2.batters.map(q=>q.id));let bow
 else{let bowArr=nCw.slots[si].bowlers;let bi=bowArr.findIndex(b2=>b2.id===p2.id);if(bi!==-1)bowArr[bi]=swp;nCw.slots[si].bowlers=fl(nCw.slots[si].bowlers);
 nCw.slots.forEach((sl2,si2)=>{let bIds=new Set(sl2.batters.map(q=>q.id));let bowIds=new Set(sl2.bowlers.map(q=>q.id));let nextBatIds=new Set();if(si2<nCw.slots.length-1)nCw.slots[si2+1].batters.forEach(q=>nextBatIds.add(q.id));sl2.fielders=allCwPlayers.filter(q=>!bIds.has(q.id)&&!bowIds.has(q.id)&&!nextBatIds.has(q.id))})}
 c({...t,centreWicket:nCw});setCwSw(null)},
-style:{display:"flex",alignItems:"center",gap:6,padding:"6px 10px",borderRadius:6,border:"1px solid "+(hasWarn?"#FFB74D":c2.border),background:hasWarn?"#FFF8E1":c2.bg,color:c2.text,fontSize:11,fontWeight:600,cursor:"pointer",textAlign:"left",width:"100%"}},
+style:{display:"flex",flexDirection:"column",gap:2,padding:"6px 10px",borderRadius:6,border:"1px solid "+(hasWarn?"#FFB74D":c2.border),background:hasWarn?"#FFF8E1":c2.bg,color:c2.text,fontSize:11,fontWeight:600,cursor:"pointer",textAlign:"left",width:"100%"}},
+u.default.createElement("div",{style:{display:"flex",alignItems:"center",gap:6}},
 u.default.createElement("span",{style:{width:8,height:8,borderRadius:"50%",background:c2.border,flexShrink:0}}),
-p2.name," ",u.default.createElement("span",{style:{fontSize:9,color:hasWarn?"#E65100":"#888",marginLeft:"auto",textAlign:"right"}},tp==="batter"?"Batting":"Bowling",hasWarn?" ⚠ ":null,hasWarn?ws.join(", "):null))})}
-
+u.default.createElement("span",{style:{fontWeight:700}},p2.name),
+u.default.createElement("span",{style:{fontSize:9,color:"#888",marginLeft:"auto"}},tp==="batter"?"Currently Batting":"Currently Bowling")),
+hasWarn&&u.default.createElement("div",{style:{fontSize:9,color:"#E65100",paddingLeft:14,lineHeight:1.3}},ws.map((w2,wi)=>u.default.createElement("div",{key:wi},"⚠ ",w2))))})}
 else{let cands=[];cwSlots.forEach((sl2,si2)=>{if(si2===cwSw.slotIdx)return;sl2.batters.forEach(p2=>{if(p2.id===cwSw.player.id)return;
 let canRes=cwCanBat(cwSw.player,si2);let blocked=!canRes.ok;let reason=canRes.ok?null:canRes.reason;
 cands.push({p:p2,si:si2,blocked:blocked,reason:reason})})});
